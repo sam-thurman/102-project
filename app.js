@@ -1,10 +1,10 @@
-function renderGreeting(){
-
-
 var today = new Date();
+
+function countdown(){
+   
+}
+
 var hourNow = today.getHours();
-
-
 var greeting;
 if (hourNow > 18) {
    greeting = 'Good evening, ';
@@ -15,22 +15,22 @@ if (hourNow > 18) {
 } else {
    greeting = 'Welcome, ';
 }
- return '<h3>' + greeting + '</h3>';
+
+function renderGreeting(){ 
+   return '<h3>' + greeting + '</h3>'
 }
 
 function askName(){
     var username = prompt('What is your name?');
     return '<h3>' + username + '!' + '</h3>';
 }
-// document.write(askName());
 
-// var sunOrMoon; 
-// if (greeting == 'Good evening, '){
-//     sunOrMoon = '<img src = "images/moon.jpg">'
-// }
-// else if (greeting !== 'Good evening, '){
-//     sunOrMoon = '<img src = "images/sun.jpg">'
-   // return sunOrMoon;
+var sunOrMoon; 
+if (greeting == 'Good evening, '){
+    sunOrMoon = '<img src = "images/moon.jpg">'
+}
+else if (greeting !== 'Good evening, '){
+    sunOrMoon = '<img src = "images/sun.jpg">'
 }
 function displaySky(){
    return sunOrMoon
