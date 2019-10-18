@@ -8,17 +8,22 @@
 </head>
 <body>
     <header>
-        <script>document.write((getTimeRemaining(deadline).days))</script>
-        <script>document.write(displaySky());</script>
-        <script>document.write(renderGreeting());</script>
-        <script>document.write(askName());</script>
-        <script>document.write(Date());</script>
-        <h1>Earl's Birthday</h1>
-        <h3>October, 31</h3>
+        <section>
+            <h1>Earl's Birthday</h1>
+            <h3>October, 31</h3>
+            <script>document.write(attending());</script>
+            <script>document.write((getTimeRemaining(deadline).days));</script>
+            <script>document.write(renderGreeting());</script>
+            <script>document.write(askName());</script>
+            <script>document.write(displaySky());</script>
+        </section>  
+        <section>  
+            <script>document.write(Date());</script>
+        </section> 
         <nav>
             <ul>
                 <li><a href="http://127.0.0.1:5500/102-project/index.html">Home</a></li>
-                <li><a href="#">Earl's Friend Duncan</a></li>
+                <li><a href="https://mokish.github.io/102-project-/">Earl's Friend Duncan</a></li>
                 <li><a href="https://www.peta.org">PETA</a></li>
                 <li><a href="https://www.amazon.com">Earl's Wishlist</a></li>
                 <li><a href="https://www.dictionary.com/browse/cat?s=t">About us</a></li>

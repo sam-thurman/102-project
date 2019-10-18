@@ -1,4 +1,16 @@
 var deadline = 'October 30 2019 23:59:59 PST';
+var greeting;
+
+function attending(){
+   var answer = prompt('Would you attend a party for a cat?');
+   while (answer !== 'yes'){
+      var answer = prompt('Come back when you\'re more mature!  Would you attend a party for a cat?')
+   }
+   while (answer === 'yes'){
+      var answer = 'We\'ll see you soon!'
+      return '<h3>' + answer + '</h3>'
+   }
+   }
 
 function getTimeRemaining(endtime){
    var t = Date.parse(endtime) - Date.parse(new Date());
@@ -15,20 +27,19 @@ function getTimeRemaining(endtime){
    };
  }
 
-var today = new Date();
-var hourNow = today.getHours();
-var greeting;
-if (hourNow > 18) {
-   greeting = 'Good evening, ';
-} else if (hourNow > 12) {
-   greeting = 'Good afternoon, ';
-} else if (hourNow > 0) {
-   greeting = 'Good morning, ';
-} else {
-   greeting = 'Welcome, ';
-}
-
-function renderGreeting(){ 
+ 
+ function renderGreeting(){ 
+   var today = new Date();
+   var hourNow = today.getHours();
+   if (hourNow > 18) {
+      greeting = 'Good evening, ';
+   } else if (hourNow > 12) {
+      greeting = 'Good afternoon, ';
+   } else if (hourNow > 0) {
+      greeting = 'Good morning, ';
+   } else {
+      greeting = 'Welcome, ';
+   }
    return '<h3>' + greeting + '</h3>'
 }
 
@@ -37,13 +48,13 @@ function askName(){
     return '<h3>' + username + '!' + '</h3>';
 }
 
-var sunOrMoon; 
-if (greeting == 'Good evening, '){
-    sunOrMoon = '<img src = "images/moon.jpg">'
-}
-else if (greeting !== 'Good evening, '){
-    sunOrMoon = '<img src = "images/sun.jpg">'
-}
 function displaySky(){
+   var sunOrMoon; 
+   if (greeting == 'Good evening, '){
+       sunOrMoon = '<img src = "images/moon.jpg">'
+   }
+   else if (greeting !== 'Good evening, '){
+       sunOrMoon = '<img src = "images/sun.jpg">'
+   }
    return sunOrMoon
 }
