@@ -49,12 +49,27 @@ function askName(){
 }
 
 function displaySky(){
-   var sunOrMoon; 
-   if (greeting == 'Good evening, '){
-       sunOrMoon = '<img src = "images/moon.jpg">'
-   }
-   else if (greeting !== 'Good evening, '){
-       sunOrMoon = '<img src = "images/sun.jpg">'
+   var item = getSeason();
+   var sunOrMoon = ''; 
+   for(var i = 0; i < item; i++){
+      if (greeting == 'Good evening, '){
+         sunOrMoon = sunOrMoon + '<img src="images/moon.jpg">'
+     }
+     else if (greeting !== 'Good evening, '){
+         sunOrMoon = sunOrMoon + '<img src="images/sun.jpg">'
+     }
    }
    return sunOrMoon
+}
+
+function getSeason(){
+   var response = prompt('Is it winter or spring?')
+   var item;
+   if (response === 'winter'){
+      item = 1;
+   }
+   else if (response === 'spring'){
+      item = 3;
+   }
+   return item;
 }
