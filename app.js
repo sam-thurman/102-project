@@ -1,19 +1,19 @@
 var deadline = 'October 30 2019 23:59:59 PST';
 
-function getTimeRemaining(deadline){
-var t = Date.parse(deadline) - Date.parse(new Date());
-var seconds = Math.floor((t/1000)%60);
-var minutes = Math.floor((t/1000/60)%60);
-var hours = Math.floor((t/(1000*60*60))%24);
-var days = Math.floor(t/(1000*60*60*24)); 
-return {
-   'total' : t,
-   'days' : days,
-   'hours' : hours,
-   'minutes' : minutes,
-   'seconds' : seconds
-};
-}
+function getTimeRemaining(endtime){
+   var t = Date.parse(endtime) - Date.parse(new Date());
+   var seconds = Math.floor( (t/1000) % 60 );
+   var minutes = Math.floor( (t/1000/60) % 60 );
+   var hours = Math.floor( (t/(1000*60*60)) % 24 );
+   var days = Math.floor( t/(1000*60*60*24) );
+   return {
+      total: '<h3>' + 'days left until the party: '+ t + '</h3>',
+      days: '<h3>' + 'days left until the party: ' + days + '</h3>',
+      hours: '<h3>' + 'days left until the party: ' + hours + '</h3>',
+      minutes: '<h3>' + 'days left until the party: ' + minutes + '</h3>',
+     seconds: '<h3>' + 'days left until the party: ' + seconds + '</h3>',
+   };
+ }
 
 var today = new Date();
 var hourNow = today.getHours();
